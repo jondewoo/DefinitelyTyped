@@ -58,6 +58,7 @@ async function testTasks(onfleet: Onfleet) {
             customField.value;
         }
     }
+    task.routePlan;
     const result = await onfleet.tasks.get({ from: 1455072025000 });
     for (const resultTask of result.tasks) {
         resultTask.pickupTask;
@@ -72,6 +73,7 @@ async function testTasks(onfleet: Onfleet) {
     const dummyTask = await onfleet.tasks.create({
         recipients: ["fake_recipient_id"],
         destination: "fake_destination_id",
+        routePlan: "fake_route_plan_id",
     });
 
     // test tasks.batchCreate
@@ -80,6 +82,7 @@ async function testTasks(onfleet: Onfleet) {
             {
                 recipients: ["fake_recipient_id"],
                 destination: "fake_destination_id",
+                routePlan: "fake_route_plan_id",
             },
             {
                 recipients: ["fake_recipient_id"],
@@ -98,6 +101,7 @@ async function testTasks(onfleet: Onfleet) {
             {
                 recipients: ["fake_recipient_id"],
                 destination: "fake_destination_id",
+                routePlan: "fake_route_plan_id",
             },
         ],
     });
@@ -152,6 +156,7 @@ async function testTasks(onfleet: Onfleet) {
                 value: "order 123",
             },
         ],
+        routePlan: "fake_route_plan_id",
     });
 
     if (taskUpdated.container.type === "WORKER") {

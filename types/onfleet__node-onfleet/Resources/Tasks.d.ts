@@ -119,6 +119,7 @@ declare namespace Task {
             }
             | undefined;
         customFields?: TaskCustomField[] | undefined;
+        routePlan?: string | undefined;
     }
 
     interface CreateMultipleTasksProps {
@@ -156,6 +157,7 @@ declare namespace Task {
         barcodes?: Barcode[] | undefined;
         serviceTime?: number | undefined;
         customFields?: Array<{ key: string; value: TaskCustomFieldValue }> | undefined;
+        routePlan?: string | undefined;
     }
 
     interface AutomaticallyAssignTaskProps {
