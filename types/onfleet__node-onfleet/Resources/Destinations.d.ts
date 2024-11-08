@@ -43,6 +43,7 @@ declare namespace Destination {
         timeLastModified: number;
         location: Location;
         address: {
+            name?: string | undefined;
             apartment: string;
             state: string;
             postalCode: string;

@@ -59,6 +59,14 @@ async function testTasks(onfleet: Onfleet) {
         }
     }
     task.routePlan;
+    task.destination.address.name;
+    task.destination.address.apartment;
+    task.destination.address.city;
+    task.destination.address.country;
+    task.destination.address.number;
+    task.destination.address.postalCode;
+    task.destination.address.state;
+    task.destination.address.street;
     const result = await onfleet.tasks.get({ from: 1455072025000 });
     for (const resultTask of result.tasks) {
         resultTask.pickupTask;
